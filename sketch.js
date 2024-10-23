@@ -106,34 +106,7 @@ function draw() {
 }
 
 
-function mousePressed() {
-  if (estado === 0)
-  {
-    estado = 1;
-    x = 0;
-    dY = 3;
-    posY = 50;
-    noCursor();
-    wallX = [900, 1200];
-    wallY = [600, 800];
-    puntaje = 0;
-    recordAnterior = record;
 
-    if (musicaRecord && musicaRecord.isPlaying()) {
-      musicaRecord.stop();
-    }
-
-    if (musicaJuego && musicaJuego.isLoaded()) {
-      console.log("Reproduciendo música del juego");
-      musicaJuego.setVolume(1.0);
-      musicaJuego.play();
-    } else {
-      console.log("La música del juego no está cargada");
-    }
-  } else {
-    dY = -15;
-  }
-}
 function touchStarted() {
   if (estado === 0) {
     estado = 1;
